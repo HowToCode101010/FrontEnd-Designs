@@ -1,0 +1,230 @@
+/* styles.css */
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #f4eee2;
+  color: #3b2614;
+  margin: 0;
+  padding: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #5a4327;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-shadow: 0 0 1px #b29670;
+}
+
+/* New Book Button */
+#newBookBtn {
+  display: block;
+  margin: 0 auto 2rem auto;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  color: #705028;
+  background: #e0ccb0;
+  border: 2px solid #b29670;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.25s, color 0.25s;
+  box-shadow: 0 2px 5px rgba(178, 157, 90, 0.3);
+  width: 140px;
+  text-align: center;
+}
+
+#newBookBtn:hover,
+#newBookBtn:focus {
+  background: #b29670;
+  color: #f4eee2;
+  outline: none;
+}
+
+/* Books container */
+#booksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Book card */
+.book-card {
+  background: #f9f6f1;
+  border: 1.5px solid #be9449;
+  border-radius: 8px;
+  box-shadow: 0 2px 7px rgba(120, 83, 39, 0.12);
+  width: 220px;
+  padding: 1rem 1rem 1.3rem 1rem;
+  font-family: Georgia, serif;
+  color: #543416;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+}
+
+.book-card h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.book-card p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #6a553f;
+}
+
+.book-card .book-meta {
+  margin: 0.3rem 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #7a6a4f;
+}
+
+.book-card .tag {
+  background: #e9dbc7;
+  color: #715b30;
+  border-radius: 6px;
+  padding: 0.15em 0.7em;
+  font-size: 0.9rem;
+  margin-top: 0.45rem;
+  user-select: none;
+}
+
+/* Dialog styling */
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  background: #f9f6f1;
+  box-shadow: 0 8px 24px rgba(120, 83, 39, 0.25);
+  width: 320px;
+  font-family: Georgia, serif;
+  color: #543416;
+}
+
+dialog::backdrop {
+  background: rgba(60, 45, 15, 0.45);
+}
+
+/* Form inside dialog */
+#newBookForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#newBookForm h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: #5a4327;
+  letter-spacing: 1px;
+}
+
+#newBookForm label {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: #6a553f;
+}
+
+#newBookForm input[type="text"],
+#newBookForm input[type="number"] {
+  margin-top: 0.3rem;
+  padding: 0.4rem 0.5rem;
+  font-size: 1rem;
+  border: 1.5px solid #be9449;
+  border-radius: 5px;
+  font-family: Georgia, serif;
+  color: #543416;
+  background: #fffbee;
+  box-shadow: inset 1px 1px 5px #d3c7a5;
+  transition: border-color 0.3s;
+}
+
+#newBookForm input[type="text"]:focus,
+#newBookForm input[type="number"]:focus {
+  border-color: #a07c35;
+  outline: none;
+}
+
+#newBookForm input[type="checkbox"] {
+  margin-top: 0.5rem;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Buttons inside form */
+#newBookForm button {
+  padding: 0.55rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: Georgia, serif;
+  border-radius: 6px;
+  border: 2px solid #b29670;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  user-select: none;
+}
+
+#newBookForm button[type="submit"] {
+  background: #d4ba8c;
+  color: #4b3812;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 5px rgba(180, 143, 61, 0.35);
+}
+
+#newBookForm button[type="submit"]:hover,
+#newBookForm button[type="submit"]:focus {
+  background: #b29670;
+  color: #f4eee2;
+  outline: none;
+}
+
+#cancelBtn {
+  background: transparent;
+  color: #705028;
+  border: 2px solid #705028;
+}
+
+#cancelBtn:hover,
+#cancelBtn:focus {
+  background: #705028;
+  color: #f4eee2;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  body {
+    padding: 1rem;
+  }
+
+  dialog {
+    width: 90vw;
+    padding: 1rem 1.2rem;
+  }
+
+  #booksContainer {
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+  .book-card {
+    width: 90vw;
+  }
+}
